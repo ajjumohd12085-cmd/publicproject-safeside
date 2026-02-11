@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Gap Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Progress -->
+  <div class="progress">
+    <span class="active">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+  </div>
+
+  <!-- PAGE 1 -->
+  <div class="card active" id="p1">
+    <h2>Student Info</h2>
+    <input id="name" placeholder="Student Name">
+    <select id="course">
+      <option value="">Select Course</option>
+      <option>CSE</option>
+      <option>IT</option>
+      <option>ECE</option>
+    </select>
+    <p class="error-msg" id="error-1"></p>
+    <button id="next-1">Next</button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="card" id="p2">
+    <h2>Student Details</h2>
+    <input id="year" placeholder="Year of Study">
+    <input id="college" placeholder="College Name">
+    <select id="level">
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
+    <p class="error-msg" id="error-2"></p>
+    <button id="next-2">Next</button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="card" id="p3">
+    <h2>Career Selection</h2>
+    
+    <select id="job">
+      <option value="">Select Role</option>
+      <option value="web">Web Developer</option>
+      <option value="data">Data Scientist</option>
+      <option value="app">App Developer</option>
+    </select>
+
+    <p>Your Current Skills</p>
+    <div class="skills">
+      <label><input type="checkbox" value="HTML">HTML</label>
+      <label><input type="checkbox" value="CSS">CSS</label>
+      <label><input type="checkbox" value="JavaScript">JavaScript</label>
+      <label><input type="checkbox" value="Python">Python</label>
+      <label><input type="checkbox" value="SQL">SQL</label>
+      <label><input type="checkbox" value="React">React</label>
+    </div>
+
+    <p class="error-msg" id="error-3"></p>
+    <button id="generate">Generate Roadmap</button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="card" id="p4">
+    <h2>Skill Gap & Roadmap</h2>
+    <div id="score" class="score"></div>
+    <div id="result"></div>
+    <button id="restart">Start Again</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

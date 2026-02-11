@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.progress span {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.progress .active {
+  background: #4a6cf7;
+  color: white;
+}
+
+.card {
+  display: none;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.card.active {
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #222;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: #d93025;
+  font-size: 12px;
+  margin: 4px 0 0;
+  min-height: 16px;
+}
+
+.score {
+  background: lightblue;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+@media (max-height: 600px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .app {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 18px;
+  }
+
+  .progress {
+    gap: 8px;
+  }
+
+  .progress span {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
